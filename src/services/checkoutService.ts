@@ -27,6 +27,7 @@ export class CheckoutService {
         const pricingRule = this.pricingRules ? this.pricingRules.get(item[0]) : null;
 
         if (pricingRule) {
+          // TODO - when more complexity is added to this it can be refactored
           switch (pricingRule.type) {
             case 'cost':
               totalCost += pricingRule.newValue * item[1];
